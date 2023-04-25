@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/308148bda0.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/308148bda0.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="CSS/styles.css" />
     <title>Nicanor-Jay Portfolio</title>
   </head>
@@ -12,7 +15,7 @@
     <div class="header-container">
       <h1 class="title"><em>isorama</em></h1>
       <nav id="navbar">
-        <ul>
+        <ul class="menu">
           <li><a class="nav-link" href="#welcome-section">About</a></li>
           <li><a class="nav-link" href="#projects-section">Projects</a></li>
           <li><a class="nav-link" href="#profile-section">Contact</a></li>
@@ -37,31 +40,67 @@
       <p>Below are some of my previous & on-going projects!</p>
       <div id="projects-display">
         <div class="project-tile">
-          <a href="https://hub.docker.com/_/python">Python Chat-Bot</a>
+          <span class="project-name">Habit Tracking Android App</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
         </div>
-        <div class="project-tile">Personal Portfolio Website</div>
-        <div class="project-tile">Habit Tracking Android App</div>
+        <div class="project-tile">
+          <span class="project-name">Personal Portfolio Website</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="project-tile">
+          <img src="./images/chatbotgif.gif">
+          <a href="https://hub.docker.com/_/python" target="_blank"><span class="project-name">Python Chat-Bot</span></a>
+          <a href="https://github.com/nicanor-jay/pythonChatBot" target="_blank"><i class="fab fa-github project-button "></i></a>
+        </div>
       </div>
     </section>
     <section id="profile-section">
       <div class="profile-header">
         <h1>🙆🏽‍♂️ Get in touch!</h1>
-        <p>View my CV</p>
+        <p>
+          <a
+            class="btn contact-details"
+            href="Nicanor_Enguerra_CV.pdf"
+            target="_blank"
+            ><i class="fa-solid fa-file"></i> View my CV</a
+          >
+        </p>
       </div>
       <div class="contact-links">
-        <a class="btn contact-details" href="https://www.linkedin.com/in/nicanor-jay" target="_blank">
+        <a
+          class="btn contact-details"
+          href="https://www.linkedin.com/in/nicanor-jay"
+          target="_blank"
+        >
           <i class="fab fa-linkedin"></i>
           LinkedIn
         </a>
-        <a class="btn contact-details" href="https://github.com/nicanor-jay" target="_blank">
+        <a
+          class="btn contact-details"
+          href="https://github.com/nicanor-jay"
+          target="_blank"
+        >
           <i class="fab fa-github"></i>
           GitHub
         </a>
-        <a class="btn contact-details" href="mailto:nenguerra@gmail.com" target="_blank">
+        <a
+          class="btn contact-details"
+          href="mailto:nenguerra@gmail.com"
+          target="_blank"
+        >
           <i class="fab fa-at"></i>
           Email
         </a>
-        
       </div>
     </section>
   </body>
