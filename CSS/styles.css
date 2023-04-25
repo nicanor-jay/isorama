@@ -1,7 +1,8 @@
 :root {
-  --color-1: #AA96DA; /*Main 60%*/
-  --color-2: white; /*Secondary 30%*/
-  --color-3: #8055E8; /*Accent 10%*/
+  --color-lilac: #aa96da; /*Main 60%*/
+  --color-white: white; /*Secondary 30%*/
+  --color-purple: #7c54a4ff; /*Accent 10%*/
+  --color-gray: #cdd2daff;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,26 +16,45 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Montserrat, sans-serif;
-  scroll-padding-top: 50px;
+  scroll-padding-top: 70px;
 }
 
 body {
-  background-color: var(--color-1);
-  color: var(--color-2);
+  background-color: var(--color-lilac);
+  color: var(--color-white);
+}
+
+h1 {
+  font-size: xx-large;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
 }
 
 header {
   width: 100%;
-  height: auto;
+  background-color: var(--color-lilac);
+  color: var(--color-white);
+  position: fixed;
+}
+
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 0;
-  padding-left: 30px;
-  background-color: var(--color-1);
-  color: var(--color-2);
-  position: fixed;
-  z-index: 1;
+  padding: 10px;
+  padding-right: 0;
+}
+
+.title {
+  margin: 0;
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 nav {
@@ -59,11 +79,6 @@ nav > ul > li {
   display: block;
 }
 
-header > nav > ul > li > a {
-  color: var(--color-2);
-  text-decoration: none;
-}
-
 section {
   display: flex;
   flex-direction: column;
@@ -71,6 +86,17 @@ section {
   justify-content: center;
   text-align: center;
   height: 200px;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Projects Section */
+
+#projects-section {
+  background-color: var(--color-gray);
+  color: var(--color-purple);
+
+  background-image: url("../images/keyboardsvg.svg");
 }
 
 #projects-display {
@@ -78,6 +104,10 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+#projects-section > #projects-display > .project-tile > a {
+  color: var(--color-purple);
 }
 
 .project-tile {
@@ -90,6 +120,36 @@ section {
   /* border: 1px solid black; */
   border-radius: 3px;
   padding: 5px;
-  background-color: var(--color-2);
-  color: var(--color-1);
+  background-color: var(--color-white);
+  color: var(--color-purple);
+}
+
+/* Contact Section */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details, .contact-details i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: var(--color-white)
+}
+
+.contact-details:hover {
+  transform: translate(5px, 5px);
+}
+
+.contact-details:hover i {
+  color:var(--color-purple);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
 }

@@ -4,24 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/308148bda0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/styles.css" />
     <title>Nicanor-Jay Portfolio</title>
   </head>
   <header>
-    <h1><em>isorama</em></h1>
-    <nav id="navbar">
-      <ul>
-        <li><a class="nav-link" href="#welcome-section">About</a></li>
-        <li><a class="nav-link" href="#projects">Projects</a></li>
-        <li><a class="nav-link" href="#profile">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <h1 class="title"><em>isorama</em></h1>
+      <nav id="navbar">
+        <ul>
+          <li><a class="nav-link" href="#welcome-section">About</a></li>
+          <li><a class="nav-link" href="#projects-section">Projects</a></li>
+          <li><a class="nav-link" href="#profile-section">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <body>
     <section id="welcome-section">
       <h1>👋 Howdy!</h1>
       <h2>
-        I'm <span style="color: var(--color-3)">Nicanor</span>, a developer
+        I'm <span style="color: var(--color-purple)">Nicanor</span>, a developer
         looking for my next opportunity!
       </h2>
       <p>
@@ -29,7 +32,7 @@
         technologies such as C++, Python & SQL.
       </p>
     </section>
-    <section id="projects">
+    <section id="projects-section">
       <h1>👨‍💻 Projects</h1>
       <p>Below are some of my previous & on-going projects!</p>
       <div id="projects-display">
@@ -40,15 +43,26 @@
         <div class="project-tile">Habit Tracking Android App</div>
       </div>
     </section>
-    <section id="profile">
-      <h1>🙆🏽‍♂️ Contact</h1>
-      <a
-        id="profile-link"
-        href="https://www.linkedin.com/in/nicanor-jay"
-        target="_blank"
-        >Get in touch!</a
-      >
-      <p>View my CV</p>
+    <section id="profile-section">
+      <div class="profile-header">
+        <h1>🙆🏽‍♂️ Get in touch!</h1>
+        <p>View my CV</p>
+      </div>
+      <div class="contact-links">
+        <a class="btn contact-details" href="https://www.linkedin.com/in/nicanor-jay" target="_blank">
+          <i class="fab fa-linkedin"></i>
+          LinkedIn
+        </a>
+        <a class="btn contact-details" href="https://github.com/nicanor-jay" target="_blank">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+        <a class="btn contact-details" href="mailto:nenguerra@gmail.com" target="_blank">
+          <i class="fab fa-at"></i>
+          Email
+        </a>
+        
+      </div>
     </section>
   </body>
 </html>
