@@ -129,8 +129,8 @@ section {
   background-color: var(--color-white);
   padding: 10px;
 }
- 
-.project-tile img{
+
+.project-tile img {
   width: 100%;
   max-width: 350px;
   object-fit: cover;
@@ -142,8 +142,8 @@ section {
   width: 350px;
 }
 
-
-.project-name, .project-button {
+.project-name,
+.project-button {
   font-weight: bold;
   font-size: larger;
 }
