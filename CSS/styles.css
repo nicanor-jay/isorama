@@ -95,6 +95,18 @@ section {
 }
 
 /*About/Welcome Section*/
+#nicsvg,  #test{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#nicsvg {
+  transform: scale(70%);
+  z-index:-1;
+  top: 0px;
+  left: 0px;
+}
+
 #hero {
   text-align: left;
   margin: 0px auto;
