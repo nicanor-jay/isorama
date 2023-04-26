@@ -1,8 +1,10 @@
 :root {
   --color-lilac: #aa96da; /*Main 60%*/
   --color-white: white; /*Secondary 30%*/
-  --color-purple: #7c54a4ff; /*Accent 10%*/
-  --color-gray: #cdd2daff;
+  --color-purple-accent: #69478B; /*Accent 10%*/
+  --color-gray: #cdd2da;
+  --color-yellow: #FAF033;
+  --color-dark-purple: #8878ae;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,6 +34,8 @@ h1 {
 h2 {
   margin-bottom: 10px;
 }
+
+/* Header section */
 
 header {
   width: 100%;
@@ -87,13 +91,57 @@ section {
   text-align: center;
   width: 100%;
   min-height: 100vh;
+  /* padding: 50px 0; */
+}
+
+/*About/Welcome Section*/
+#hero {
+  text-align: left;
+  margin: 0px auto;
+}
+
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 1.5s;        /* Change to speed up or slow down */
+  animation-iteration-count:infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+#name {
+  color: var(--color-yellow);
+  font-size: 60px;
+  font-weight: bold;
+}
+
+#desc {
+  display: block;
+  font-size:40px;
+  color: var(--color-yellow);
+  margin-bottom: 20px;
+}
+
+#hero p {
+  max-width: 600px;
+  /* text-align: justify; */
 }
 
 /* Projects Section */
 
 #projects-section {
   background-color: var(--color-gray);
-  color: var(--color-purple);
+  color: var(--color-purple-accent);
 
   background-image: url("../images/keyboardsvg.svg");
 }
@@ -106,7 +154,7 @@ section {
 }
 
 #projects-section > #projects-display > .project-tile > a {
-  color: var(--color-purple);
+  color: var(--color-purple-accent);
 }
 
 #projects-display {
@@ -156,7 +204,11 @@ section {
   color: black;
 }
 
-/* Contact Section */
+/* Profile Section */
+#profile-section {
+  background-color: var(--color-dark-purple);
+}
+
 .contact-links {
   display: flex;
   justify-content: center;
@@ -178,7 +230,7 @@ section {
 }
 
 .contact-details:hover i {
-  color: var(--color-purple);
+  color: var(--color-purple-accent);
 }
 
 .btn {
