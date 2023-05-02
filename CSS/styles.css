@@ -7,6 +7,12 @@
   --color-dark-purple: #8878ae;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  font-family: Montserrat;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   * {
     scroll-behavior: smooth;
