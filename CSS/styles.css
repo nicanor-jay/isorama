@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --color-lilac: #aa96da; /*Main 60%*/
   --color-white: white; /*Secondary 30%*/
-  --color-purple-accent: #69478B; /*Accent 10%*/
+  --color-purple-accent: #69478b; /*Accent 10%*/
   --color-gray: #cdd2da;
-  --color-yellow: #FAF033;
+  --color-yellow: #faf033;
   --color-dark-purple: #8878ae;
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   * {
@@ -34,6 +33,27 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
 body {
   background-color: var(--color-lilac);
   color: var(--color-white);
@@ -41,7 +61,7 @@ body {
 
 h1 {
   font-size: xx-large;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 h2 {
@@ -50,7 +70,7 @@ h2 {
 
 p {
   font-size: 1.6rem;
-  font-weight:600;
+  font-weight: 600;
 }
 
 /* Header section */
@@ -94,7 +114,7 @@ nav > ul {
   padding-inline-start: 0;
   margin-block: 0;
   height: 100%;
-  margin-right:1rem;
+  margin-right: 1rem;
 }
 
 nav > ul > li {
@@ -102,6 +122,16 @@ nav > ul > li {
   display: block;
   font-size: 1.6rem;
   font-weight: 600;
+}
+
+@media (max-width: 28.75em) {
+  nav {
+    justify-content: center;
+  }
+
+  nav-list ul {
+    margin: 0 1rem;
+  }
 }
 
 section {
@@ -117,26 +147,42 @@ section {
 /*About/Welcome Section*/
 #hero {
   text-align: left;
-  margin: 0 auto;
+  margin: 0 2rem;
 }
 
 .wave {
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 1.5s;        /* Change to speed up or slow down */
-  animation-iteration-count:infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 1.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
 @keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 #hero h3 {
@@ -146,12 +192,12 @@ section {
 #name {
   color: var(--color-yellow);
   font-size: 6rem;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 #desc {
   display: block;
-  font-size:4rem;
+  font-size: 4rem;
   font-weight: 500;
   color: var(--color-yellow);
   margin-bottom: 2rem;
@@ -167,15 +213,13 @@ section {
 #projects-section {
   background-color: var(--color-gray);
   color: var(--color-purple-accent);
-
   background-image: url("../images/keyboardsvg.svg");
+  text-align: center;
+  padding: 10rem 2rem;
 }
 
-#projects-display {
-  margin-top: 6rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+#projects-section p {
+  margin: 0 auto 6rem auto;
 }
 
 #projects-section > #projects-display > .project-tile > a {
@@ -183,50 +227,49 @@ section {
 }
 
 #projects-display {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.6rem;
-  max-width: 140rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 800px) {
+  #projects-section {
+    padding: 6rem;
+  }
+
+  #projects-display {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-tile {
-  width: 100%;
-  max-width: 35rem;
   object-fit: cover;
   border-radius: 1rem;
   background-color: var(--color-white);
   padding: 1rem;
+  height: 40rem;
 }
 
 .project-tile img {
+  display: block;
+  height: calc(100% - 3rem);
   width: 100%;
-  max-width: 35rem;
   object-fit: cover;
-  border-radius: 1rem;
-}
-
-#projects-display::after {
-  content: "";
-  width: 35rem;
+  margin-bottom: 1rem;
 }
 
 .project-name,
 .project-button {
   font-weight: bold;
-  font-size:1.8rem;
+  font-size: 1.8rem;
 }
 
 .project-button {
   text-align: right;
-}
-
-.project-tile p {
-  color: black;
 }
 
 /* Profile Section */
@@ -238,10 +281,9 @@ section {
   display: flex;
   justify-content: center;
   width: 100%;
-  /* max-width: 980px; */
   margin-top: 4rem;
   flex-wrap: wrap;
-  font-weight:500;
+  font-weight: 500;
 }
 
 .contact-details,
@@ -252,7 +294,7 @@ section {
 }
 
 .contact-details:hover {
-  transform: translate(.5rem, .5rem);
+  transform: translate(0.5rem, 0.5rem);
 }
 
 .contact-details:hover i {
@@ -262,5 +304,5 @@ section {
 .btn {
   display: inline-block;
   padding: 1rem 2rem;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
 }
