@@ -13,11 +13,6 @@
   html {
     font-size: 60%;
   }
-
-  .menu {
-    right:0;
-    box-shadow: 0;
-  }
 }
 
 /* 980px / 16px = 61.25em */
@@ -114,6 +109,15 @@ a {
   align-items: center;
 }
 
+.header-container a {
+  color: var(--color-white);
+  transition: color 0.2s ease;
+}
+
+.header-container a:hover {
+  color: var(--color-purple-accent);
+}
+
 .hamburger {
   position: relative;
   width: 30px;
@@ -184,7 +188,7 @@ a {
   flex-direction: row;
   align-items: center;
   z-index: 1;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .menu > li {
