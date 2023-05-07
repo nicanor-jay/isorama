@@ -418,6 +418,7 @@ section {
 #back-to-projects {
   margin-right:1rem;
   font-size: 1.6rem;
+  font-weight:600;
 }
 
 #project-page {
@@ -473,4 +474,11 @@ section {
 
 #project-img {
   margin: 1rem 2rem; 
+}
+
+#view-project {
+  background-color: white;
+  width: 15rem;
+  font-size:2rem;
+  padding:1rem;
 }
