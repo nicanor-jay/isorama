@@ -251,8 +251,9 @@ section {
   }
 }
 
-#hero h3 {
-  font-size: 1.8rem;
+#hero h3, #hero p {
+  font-size: 2rem;
+  max-width: 60rem;
 }
 
 #name {
@@ -269,10 +270,6 @@ section {
   margin-bottom: 2rem;
 }
 
-#hero p {
-  max-width: 60rem;
-  /* text-align: justify; */
-}
 
 /* Projects Section */
 
