@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/styles.css" />
+    <title>Media Backup || Nicanor Jay Portfolio</title>
+</head>
+<body>
+    <header>
+      <div class="header-container">
+        <h1 class="title"><em><a href = ../index.html>isorama</a></em></h1>
+        <a id="back-to-projects" href = ../index.html#projects-section>back to projects</a>
+    </header>
+    <div id="project-page">
+        <div id="project-box">
+            <h1 id="project-title">Phone Media Backup Organiser
+            </h1>
+            <p>a tool made with Python to organise files by year & month.</p>
+            <div id="buttons-container">
+                <a class="view-button" target="_blank" href="https://github.com/nicanor-jay/phoneBackupOrganiser">View Repository</a>
+            </div>
+        </div>
+        <img src="../../images/phonebackuporganiser.png" id="project-img">
+        <div id="project-desc">
+            <h1>Inspiration</h1>
+            <p>The original inspiration behind his project was to decrease the time
+                it took for me to transfer and organise all of the photos and 
+                videos that my mum loved to take on her phone, onto her portable
+                storage drive; I can't tell you the amount of SD cards she has 
+                already completely filled up. It also helps with redundancy, as 
+                it helps organise your local backup.
+                <br><br>
+                Before I created this tool, the reptitive workflow was as follows:
+                <ol>
+                    <li>Connect phone & portable storage to PC.</li>
+                    <li>Begin searching at x point in time, say 2021-05</li>
+                    <li>Wait for the search to complete</li>
+                    <li>Transfer all found files to portable hard drive (which sometimes took hours)</li>
+                    <li>Move on to next month (2021-06) and repeat steps 3-5 until up to date</li>
+                </ol>
+                <br><br>
+                <p>
+                    The record was 12 hours for only 3 months of media!!! 
+                    <br><br>
+                    Now that it exists, the longest part of the process is 
+                    transferring all data (without need of specifying months) to the 
+                    portable hard drive, and pressing a single button.
+                    <h1>Downfalls</h1>
+                    <p>This tool works best if you haven't backed up any of your files
+                        for a couple of months or years, as if you are simply doing
+                        a monthly backup, it is easier to just pop the year/month in 
+                        the search bar to drag & drop accordingly.
+                        <br><br>
+                        The addition of regex to check for dates via file name
+                        would be a helpful addition, and furthermore, examining
+                        file metadata would be even more beneficial to the 
+                        improvement of this tool.
+                    </p>
+                </p>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
