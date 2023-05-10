@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --color-lilac: #aa96da; /*Main 60%*/
-  --color-white: white; /*Secondary 30%*/
-  --color-purple-accent: #69478b; /*Accent 10%*/
-  --color-gray: #cdd2da;
-  --color-yellow: #faf033;
+  --primary: #aa96da; /*Main 60%*/
+  --secondary: white; /*Secondary 30%*/
+  --hover-accent: #69478b; /*Accent 10%*/
+  --accent: #ffD500;
+  --secbuttn: #666666;
 }
 
 /* 1200px / 16px = 75em */
@@ -54,8 +54,8 @@ html {
 }
 
 body {
-  background-color: var(--color-lilac);
-  color: var(--color-white);
+  background-color: var(--primary);
+  color: var(--secondary);
 }
 
 h1 {
@@ -72,8 +72,8 @@ p {
 
 header {
   width: 100%;
-  background-color: var(--color-lilac);
-  color: var(--color-white);
+  background-color: var(--primary);
+  color: var(--secondary);
   position: fixed;
   z-index: 1;
 }
@@ -92,7 +92,7 @@ header {
 }
 
 a {
-  color: var(--color-white);
+  color: var(--secondary);
   text-decoration: none;
 }
 
@@ -103,12 +103,12 @@ a {
 }
 
 .header-container a {
-  color: var(--color-white);
+  color: var(--secondary);
   transition: color 0.2s ease;
 }
 
 .header-container a:hover {
-  color: var(--color-purple-accent);
+  color: var(--hover-accent);
 }
 
 .hamburger {
@@ -256,7 +256,7 @@ section {
 }
 
 #name {
-  color: var(--color-yellow);
+  color: var(--accent);
   font-size: 6rem;
   font-weight: bold;
 }
@@ -265,20 +265,18 @@ section {
   display: block;
   font-size: 4rem;
   font-weight: 500;
-  color: var(--color-yellow);
+  color: var(--accent);
   margin-bottom: 2rem;
 }
 
 #hero p {
   max-width: 60rem;
-  /* text-align: justify; */
 }
 
 /* Projects Section */
 
 #projects-section {
-  background-color: var(--color-gray);
-  color: var(--color-purple-accent);
+  color: var(--hover-accent);
   background-image: url("../images/keyboardsvg.svg");
   text-align: center;
   padding: 5rem 2rem;
@@ -289,7 +287,7 @@ section {
 }
 
 #projects-section > #projects-display > .project-tile > a {
-  color: var(--color-purple-accent);
+  color: var(--hover-accent);
 }
 
 #projects-display {
@@ -326,7 +324,7 @@ section {
     align-items: center;
     position: fixed;
     top: 0;
-    background-color: var(--color-purple-accent);
+    background-color: var(--hover-accent);
     width: 11rem;
     height: 100%;
     padding-top: 10rem;
@@ -348,7 +346,7 @@ section {
 .project-tile {
   object-fit: cover;
   border-radius: 1rem;
-  background-color: var(--color-white);
+  background-color: var(--secondary);
   padding: 1rem;
   max-height: 50rem;
   transition: transform 0.3s ease;
@@ -395,7 +393,7 @@ section {
 .contact-details i {
   font-size: 2.2rem;
   transition: transform 0.3s ease, color 0.3s ease;
-  color: var(--color-white);
+  color: var(--secondary);
 }
 
 .contact-details:hover {
@@ -403,7 +401,7 @@ section {
 }
 
 .contact-details:hover i {
-  color: var(--color-purple-accent);
+  color: var(--hover-accent);
 }
 
 .btn {
@@ -420,8 +418,7 @@ section {
 }
 
 #project-page {
-  background-color: var(--color-gray);
-  color: var(--color-purple-accent);
+  color: var(--hover-accent);
   background-image: url("../images/keyboardsvg.svg");
   padding: 5rem 2rem;
 
@@ -451,7 +448,7 @@ section {
 }
 
 #project-box {
-  background-color: var(--color-lilac);
+  background-color: var(--primary);
   margin-top: 5rem;
   padding: 2rem 3rem;
   display: flex;
@@ -459,7 +456,7 @@ section {
 }
 
 #project-title {
-  color: var(--color-yellow);
+  color: var(--accent);
   font-size: 4rem;
   /* margin: 0; */
 }
@@ -468,12 +465,12 @@ section {
 #project-desc p {
   font-size: 1.8rem;
   /* text-align: justify; */
-  color: var(--color-white);
+  color: var(--secondary);
   margin-bottom: 1rem;
 }
 
 #project-desc {
-  background-color: var(--color-lilac);
+  background-color: var(--primary);
   padding: 2rem 3rem;
 }
 
@@ -487,7 +484,7 @@ section {
 
 .view-button {
   background-color: white;
-  color: var(--color-purple-accent);
+  color: var(--hover-accent);
   font-size: 1.8rem;
   font-weight: 600;
   padding: 1rem;
@@ -506,7 +503,7 @@ section {
 
 ol {
   font-size: 1.8rem;
-  color:var(--color-white);
+  color:var(--secondary);
   font-weight: 600;
   list-style-position: inside;
 }
